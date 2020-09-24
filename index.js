@@ -1,5 +1,6 @@
 import { CartItem, ColorItem, SizeItem } from "./itemV1.js";
 import { CartItem2, ColoredSized } from "./itemV2.js";
+import { countryCheckOut } from "./checkout.js";
 
 function itemsV1() {
   const item = new CartItem(10, 2, "Mangos");
@@ -10,7 +11,12 @@ function itemsV1() {
   const totalCost = basket.reduce((total, currentItem) => {
     return total + currentItem.cost;
   }, 0);
-  console.log(`total cost ${totalCost}`);
+  console.log(`total cost before tax ${totalCost}`);
+  const ghanaCost = countryCheckOut(basket, "GH");
+  const nigeriaCost = countryCheckOut(basket, "NG");
+  console.log(
+    `Ghana Cost with VAT ${ghanaCost} Nigerian Cost with VAT ${nigeriaCost}`
+  );
 }
 
 function itemsV2() {
@@ -24,6 +30,11 @@ function itemsV2() {
   const basket = [item, item2];
   console.log("items v2");
   console.table(basket);
+  const ghanaCost = countryCheckOut(basket, "GH");
+  const nigeriaCost = countryCheckOut(basket, "NG");
+  console.log(
+    `Ghana Cost with VAT ${ghanaCost} Nigerian Cost with VAT ${nigeriaCost}`
+  );
 }
 itemsV1();
 itemsV2();

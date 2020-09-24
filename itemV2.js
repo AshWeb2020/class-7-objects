@@ -1,3 +1,13 @@
+/**
+ * Object Composition Example
+ * For more information, see also: https://ui.dev/javascript-inheritance-vs-composition/
+ */
+/**
+ * CartItem2 Factory Function
+ * @param {number} quantity
+ * @param {number} price
+ * @param {string} name
+ */
 export function CartItem2(quantity, price, name) {
   let cartItem = {
     quantity,
