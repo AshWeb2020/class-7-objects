@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "webdev-class-7",
+  "version": "0.0.1",
+  "description": "Some Samples for Web Development Class",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "samples",
+    "objects",
+    "composition"
+  ],
+  "author": "Todd Warren",
+  "license": "MIT"
+}
